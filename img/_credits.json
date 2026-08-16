@@ -1,0 +1,20 @@
+{
+ "cuttle": {
+  "license": "CC BY 2.0",
+  "artist": "Christian Gloor from Wakatobi Dive Resort, Indonesia",
+  "page": "https://commons.wikimedia.org/wiki/File%3AAscarosepion%20pfefferi%20%2814519167637%29.jpg",
+  "sci": "Metasepia pfefferi"
+ },
+ "nudi": {
+  "license": "CC BY-SA 2.0",
+  "artist": "Matt Kieffer",
+  "page": "https://commons.wikimedia.org/wiki/File%3AChromodoris%20quadricolor%2C%20Sharm%20el%20Sheikh.jpg",
+  "sci": "Chromodoris quadricolor"
+ },
+ "mantis": {
+  "license": "CC BY-SA 4.0",
+  "artist": "Diego Delso",
+  "page": "https://commons.wikimedia.org/wiki/File%3ACamar%C3%B3n%20mantis%20%28Odontodactylus%20scyllarus%29%2C%20Anilao%2C%20Filipinas%2C%202023-08-24%2C%20DD%20167.jpg",
+  "sci": "Odontodactylus scyllarus"
+ }
+}
