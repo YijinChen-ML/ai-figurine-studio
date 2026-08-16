@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>金毛幼犬 — AI 手办工坊</title>
+<script type="module">
+import {ModelViewerElement} from './lib/model-viewer.min.js';
+ModelViewerElement.dracoDecoderLocation = './lib/';
+</script>
+<style>
+ :root{--bg:#f7f6f3;--card:#fff;--ink:#20263a;--sub:#70747f;--line:#e7e4dc;--navy:#1e2f4d;--brass:#a8834b;--cream:#f3ead9}
+ *{box-sizing:border-box}
+ body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+ a{text-decoration:none;color:inherit}
+ .topbar{position:sticky;top:0;z-index:9;display:flex;align-items:center;gap:16px;padding:13px 30px;background:rgba(30,47,77,.97);color:#f5f2ea;backdrop-filter:blur(6px)}
+ .brand{font-size:18px;font-weight:600;letter-spacing:3px}
+ .brand b{color:#d8b878}
+ .topbar .sp{flex:1}
+ .topbar a.cta{background:var(--brass);color:#fff;padding:7px 18px;border-radius:22px;font-size:13.5px;letter-spacing:1px}
+
+ .stage{display:flex;flex-direction:column;height:calc(100dvh - 50px)}
+ .head{display:flex;align-items:baseline;gap:14px;padding:15px 30px;background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap}
+ .head h1{font-size:21px;margin:0;font-weight:600}
+ .head p{margin:0;color:var(--sub);font-size:14px}
+ model-viewer{flex:1;width:100%;background:linear-gradient(175deg,#eef0f2,#dcd9d2);--poster-color:transparent}
+ .hint{position:absolute;bottom:70px;left:0;right:0;text-align:center;color:#9aa;font-size:12.5px;pointer-events:none}
+ .nav{display:flex;justify-content:space-between;padding:12px 30px;background:var(--card);border-top:1px solid var(--line);font-size:14px}
+ .nav a:hover{color:var(--brass)}
+ @media(max-width:640px){.head{padding:12px 16px}.nav{padding:10px 16px}}
+</style></head><body>
+<div class="topbar"><a href="index.html"><span class="brand">AI <b>手办</b>工坊</span></a><span class="sp"></span><a class="cta" href="index.html#contact">定制咨询</a></div>
+<div class="stage">
+ <div class="head"><h1>金毛幼犬</h1><p>仰头等你回家的那一刻，定格成手办</p></div>
+ <model-viewer src="models/pup2_final.glb" poster="img/pup2_final.png" camera-controls auto-rotate auto-rotate-delay="800" shadow-intensity="1.2" exposure="0.95" loading="eager"></model-viewer>
+ <div class="nav"><a href="beagle_real.html">← 上一件</a><a href="index.html">全部作品</a><a href="kitten_real.html">下一件 →</a></div>
+</div>
+</body></html>
