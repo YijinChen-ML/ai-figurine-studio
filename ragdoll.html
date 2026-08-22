@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>布偶猫 — 手办工坊</title>
+<script type="module">
+import {ModelViewerElement} from './lib/model-viewer.min.js';
+ModelViewerElement.dracoDecoderLocation = './lib/';
+</script>
+<style>
+ :root{--bg:#f7f6f3;--card:#fff;--ink:#20263a;--sub:#70747f;--line:#e7e4dc;--navy:#1e2f4d;--brass:#a8834b;--cream:#f3ead9}
+ *{box-sizing:border-box}
+ body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+ a{text-decoration:none;color:inherit}
+ .topbar{position:sticky;top:0;z-index:9;display:flex;align-items:center;gap:16px;padding:13px 30px;background:rgba(30,47,77,.97);color:#f5f2ea;backdrop-filter:blur(6px)}
+ .brand{font-size:18px;font-weight:600;letter-spacing:3px}
+ .brand b{color:#d8b878}
+ .topbar .sp{flex:1}
+
+ .stage{display:flex;flex-direction:column;height:calc(100dvh - 50px)}
+ .head{display:flex;align-items:baseline;gap:14px;padding:15px 30px;background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap}
+ .head h1{font-size:21px;margin:0;font-weight:600}
+ .head .sci{color:var(--sub);font-size:14px;font-style:italic}
+ .stagewrap{flex:1;display:flex;min-height:0}
+ .side{width:310px;background:var(--card);border-right:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px;overflow-y:auto}
+ .side .lab{font-size:12px;letter-spacing:2px;color:var(--brass);font-weight:600}
+ .side img{width:100%;border-radius:12px;border:1px solid var(--line);object-fit:cover}
+ .side .note{font-size:12.5px;color:var(--sub);line-height:1.65}
+ .side .note a{color:var(--brass)}
+ model-viewer{flex:1;height:100%;background:linear-gradient(175deg,#eef0f2,#dcd9d2);--poster-color:transparent}
+ @media(max-width:760px){.stagewrap{flex-direction:column}.side{width:100%;border-right:none;border-bottom:1px solid var(--line);flex-direction:row;align-items:center;padding:12px}.side img{width:110px}}
+ .nav{display:flex;justify-content:space-between;padding:12px 30px;background:var(--card);border-top:1px solid var(--line);font-size:14px}
+ .nav a:hover{color:var(--brass)}
+ @media(max-width:640px){.head{padding:12px 16px}.nav{padding:10px 16px}}
+</style></head><body>
+<div class="topbar"><a href="index.html"><span class="brand"><b>手办</b>工坊</span></a></div>
+<div class="stage">
+ <div class="head"><h1>布偶猫</h1></div>
+ <div class="stagewrap">
+  <div class="side"><div class="lab">你 的 照 片</div><img src="img/ragdoll_photo.jpg" alt="原始照片"></div>
+  <model-viewer src="models/ragdoll.glb" camera-controls auto-rotate auto-rotate-delay="800" shadow-intensity="1.2" exposure="0.9" loading="eager"></model-viewer>
+ </div>
+ <div class="nav"><a href="pup2_final.html">← 上一件</a><a href="index.html">全部作品</a><a href="ragdoll2.html">下一件 →</a></div>
+</div>
+</body></html>

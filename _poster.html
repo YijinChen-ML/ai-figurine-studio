@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script type="module">
+import {ModelViewerElement} from './lib/model-viewer.min.js';
+ModelViewerElement.dracoDecoderLocation = './lib/';
+</script>
+<style>html,body{margin:0;background:#fff}model-viewer{width:900px;height:900px;background:#eceff2;--poster-color:transparent}</style>
+</head><body>
+<model-viewer id="mv" interaction-prompt="none" shadow-intensity="1.1" exposure="1.05" loading="eager"
+  environment-image="neutral"></model-viewer>
+<script>
+const p=new URLSearchParams(location.search); const mv=document.getElementById('mv');
+mv.src='models/'+p.get('m')+'.glb';
+if(p.get('orbit')) mv.setAttribute('camera-orbit',p.get('orbit'));
+if(p.get('target')) mv.setAttribute('camera-target',p.get('target'));
+mv.addEventListener('load',()=>{window.__ready=true;});
+</script></body></html>
